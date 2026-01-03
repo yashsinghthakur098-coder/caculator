@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Random Color Zen
+
+A beautifully simple, production-ready React Native app that generates random colors instantly. Built with Expo for cross-platform compatibility (Android, iOS, Web).
+
+## Features
+
+- ✨ One-tap random color generation
+- 🎨 Large, beautiful color display (80% of screen)
+- 📝 Clear HEX and RGB color values
+- 🧘 Modern Zen theme with calming colors
+- 📱 Fully responsive (mobile and web)
+- 🚀 Minimal code, no external dependencies
+
+## Design
+
+The app uses a Modern Zen color palette:
+- **Button**: Sage Green `#5A8B6F`
+- **Background**: Warm Sand `#E8DCC4`
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ installed
+- Expo Go app on your device (for testing)
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running on Different Platforms
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start Expo development server
+npm start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Scan QR code with Expo Go app on your device
+# Or press one of these keys:
 
-## Learn More
+a - Open on Android
+i - Open on iOS simulator
+w - Open in web browser
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Building for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Android APK
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Install EAS CLI
+npm install -g eas-cli
 
-## Deploy on Vercel
+# Configure EAS (one-time setup)
+eas build:configure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Build Android APK
+npm run build:android
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### iOS
+
+For iOS builds, you'll need an Apple Developer account:
+```bash
+eas build --platform ios
+```
+
+### Web
+
+The web version is automatically built when you run:
+```bash
+npm start
+```
+Then press `w` to open in your browser.
+
+## Project Structure
+
+```
+random-color-zen/
+├── app/
+│   ├── _layout.tsx    # Root layout with navigation
+│   └── index.tsx      # Main color generator screen
+├── assets/            # App icons and images
+├── app.json          # Expo configuration
+├── package.json      # Dependencies
+├── tsconfig.json     # TypeScript configuration
+└── README.md         # This file
+```
+
+## Usage
+
+1. Open the app
+2. Tap the "Generate Color" button
+3. See the new random color displayed
+4. View the HEX and RGB values below the color
+5. Repeat as desired!
+
+## Tech Stack
+
+- **React Native** 0.76.6
+- **Expo** SDK 52
+- **TypeScript** 5.3
+- **Expo Router** 4.0 for navigation
+
+## License
+
+MIT

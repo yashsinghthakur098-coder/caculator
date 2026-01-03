@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Random Color Zen",
+    "slug": "random-color-zen",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.randomcolorzen.app"
+    },
+    "android": {
+      "package": "com.randomcolorzen.app"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
